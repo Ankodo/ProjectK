@@ -4,7 +4,8 @@
 
  
 Инициализация прямоугольника (Стены), объявление переменных и констант. Добавление двух текстур и двух объектов Bitmap.
-public partial class Form1 : Form
+
+    public partial class Form1 : Form
     {
         Color bc, pc;
         Device dr;
@@ -34,7 +35,8 @@ public partial class Form1 : Form
 
 
 Инициализация формы, обработка движения колеса мыши и задания цветов системного и фона.
-public Form1()
+
+    public Form1()
         {
             InitializeComponent();
             this.MouseWheel += new MouseEventHandler(Form1_MouseWheel);
@@ -43,8 +45,10 @@ public Form1()
         }
 
 
+
 Иниицализация 3Д устройств – для Hi и Low poly
-//Инициализация 3D устройства Low
+
+        //Инициализация 3D устройства Low
         private bool InitializeGraphicsL()
         {
             try
@@ -81,7 +85,8 @@ public Form1()
         }
 
 Загрузка формы, инициализация 3д устройства применение шейдеров (eff) и включение таймера
-//Загрузка формы
+        
+        //Загрузка формы
         private void Form1_Load(object sender, EventArgs e)
         {
             //Попытка инициализации 3D устройства
@@ -97,7 +102,8 @@ public Form1()
             timer1.Enabled = true; //Включение таймера
         }
 Реализация обзора мышкой. 
-//Обзор мышкой
+
+        //Обзор мышкой
         private void Form1_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             Vector3 cpt = cp0;
@@ -112,12 +118,12 @@ public Form1()
                 cp = Vector3.TransformCoordinate(cp0, Matrix.RotationAxis(Vector3.Cross(cp0, cup), beta) * Matrix.RotationZ(-alpha));
             }
         }
-private void Form1_MouseDown(object sender, MouseEventArgs e)
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             cur0 = e.Location;
             cp0 = cp;
         }
-//Приближение/удаление СКМ
+        //Приближение/удаление СКМ
         private void Form1_MouseWheel(object sender, MouseEventArgs e)
         {
             Vector3 cpt = cp;
@@ -132,8 +138,10 @@ private void Form1_MouseDown(object sender, MouseEventArgs e)
             }
             cp = cpt;
         }
+        
 Реализация обработки сцены пот таймеру предоставленным WindowsForm(Работает по примеру взятого в использованных материалах)
-//Вывод по таймеру
+        
+        //Вывод по таймеру
         private void timer1_Tick(object sender, EventArgs e)
         {
             try
@@ -174,7 +182,8 @@ private void Form1_MouseDown(object sender, MouseEventArgs e)
             }
         }
 Выбор цвета фона
-//Фон
+        
+        //Фон
         private void m27_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
@@ -183,20 +192,23 @@ private void Form1_MouseDown(object sender, MouseEventArgs e)
             }
         }
 Изначальное положение камеры по клику
-//Исходное положение камеры
+        
+        //Исходное положение камеры
         private void m22_Click(object sender, EventArgs e)
         {
             cp = ct + new Vector3(0, -1, 1);
         }
 
 Выход из приложения
-//Выход
+        
+        //Выход
         private void m12_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 Цвет текстуры наложенной на объект
-//Цвет образца
+        
+        //Цвет образца
         private void цветТекстурыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
@@ -205,7 +217,8 @@ private void Form1_MouseDown(object sender, MouseEventArgs e)
             }
         }
 Что происходит с картинкой при изменение размера окна
-private void Form1_Resize(object sender, EventArgs e)
+        
+        private void Form1_Resize(object sender, EventArgs e)
         {
             pictureBox1.Width = ClientSize.Width / 4;
             pictureBox1.Height = pictureBox1.Width;
@@ -220,7 +233,8 @@ private void Form1_Resize(object sender, EventArgs e)
             hScrollBar1.Left = pictureBox2.Left;
         }
 Открытие карты высот
-  private void открытьКартуВысотToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void открытьКартуВысотToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Карта высот(*.jpg)|*.jpg";
             openFileDialog1.FileName = "";
@@ -241,7 +255,8 @@ private void Form1_Resize(object sender, EventArgs e)
             }
         }
 Использование GPU, 3D Low утсройство, без сглаживания (Реализация с интернета)
-private void преобразоватьToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void преобразоватьToolStripMenuItem_Click(object sender, EventArgs e)
         {                                  
             if (pictureBox1.Image == null) return;
             Vector3 tnorm, znorm = new Vector3(0, 0, 1);
@@ -270,7 +285,8 @@ private void преобразоватьToolStripMenuItem_Click(object sender, Ev
             txn = Texture.FromBitmap(dr, bmnm, Usage.None, Pool.Managed);
         }
 Сохранения карт нормалей
-private void сохранитьКартуНормалейToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void сохранитьКартуНормалейToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.Filter = "Карта нормалей(*.jpg)|*.jpg";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK && saveFileDialog1.FileName.Length > 0)
@@ -289,7 +305,8 @@ private void сохранитьКартуНормалейToolStripMenuItem_Click
             }
         }
 Освещение с тернарным логическим оператором (?)
-private void изКамерыToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void изКамерыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripStatusLabel2.Text = (изКамерыToolStripMenuItem.Checked) ? "из камеры" : " ";
         }
@@ -300,7 +317,8 @@ private void изКамерыToolStripMenuItem_Click(object sender, EventArgs e)
         }
 
 Функция открытия карты нормалей
-private void открытьКартуНормалейToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void открытьКартуНормалейToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Карта нормалей(*.jpg)|*.jpg";
             openFileDialog1.FileName = "";
@@ -321,7 +339,8 @@ private void открытьКартуНормалейToolStripMenuItem_Click(obj
             }  
         }
 Функция сохранения карты высот
-private void сохранитьКартуВысотToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void сохранитьКартуВысотToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.Filter = "Карта высот(*.jpg)|*.jpg";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK && saveFileDialog1.FileName.Length > 0)
@@ -340,7 +359,8 @@ private void сохранитьКартуВысотToolStripMenuItem_Click(objec
             }
         }
 Использование GPU, Hi 3D устройство + сглаживание (реализация с интернета)
-private void использоватьGPUToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void использоватьGPUToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (pictureBox1.Image == null) return;
             Surface newbb = dr.CreateRenderTarget(bmhm.Width, bmhm.Height, Format.A8R8G8B8, MultiSampleType.None, 0, true);
@@ -375,7 +395,8 @@ private void использоватьGPUToolStripMenuItem_Click(object sender, E
             oldbb.Dispose();
         }
 Энкодер который переводит изображение 
-private ImageCodecInfo GetEncoder(ImageFormat format)
+        
+        private ImageCodecInfo GetEncoder(ImageFormat format)
         {
             ImageCodecInfo[] codecs = ImageCodecInfo.GetImageDecoders();
             foreach (ImageCodecInfo codec in codecs)
