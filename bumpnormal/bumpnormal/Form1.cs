@@ -121,7 +121,7 @@ namespace bumpnormal
             cp0 = cp;
         }
 
-        //Приближение/удаление СКМ
+        //Приближение/удаление роликом
         private void Form1_MouseWheel(object sender, MouseEventArgs e)
         {
             Vector3 cpt = cp;
@@ -200,7 +200,7 @@ namespace bumpnormal
         }
 
         //Цвет образца
-        private void цветТекстурыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void цветОбразцаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -273,38 +273,33 @@ namespace bumpnormal
             txn = Texture.FromBitmap(dr, bmnm, Usage.None, Pool.Managed);
         }
 
-        //private void сохранитьКартуНормалейToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    saveFileDialog1.Filter = "Карта нормалей(*.jpg)|*.jpg";
-        //    if (saveFileDialog1.ShowDialog() == DialogResult.OK && saveFileDialog1.FileName.Length > 0)
-        //    {
-        //        try
-        //        {
-        //            ImageCodecInfo jpgEncoder = GetEncoder(ImageFormat.Jpeg);
-        //            EncoderParameters myEncoderParameters = new EncoderParameters();
-        //            myEncoderParameters.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L);
-        //            pictureBox2.Image.Save(saveFileDialog1.FileName, jpgEncoder, myEncoderParameters);
-        //        }
-        //        catch
-        //        {
-        //            MessageBox.Show("Ошибка при сохранении файла");
-        //        }
-        //    }
-        //}
-
-        private void НаправленныйToolStripMenuItem_Click(object sender, EventArgs e)
+        private void сохранитьКартуНормалейToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStripStatusLabel2.Text = (изКамерыToolStripMenuItem.Checked) ? "Направленный источник" : " ";
+            saveFileDialog1.Filter = "Карта нормалей(*.jpg)|*.jpg";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK && saveFileDialog1.FileName.Length > 0)
+            {
+                try
+                {
+                    ImageCodecInfo jpgEncoder = GetEncoder(ImageFormat.Jpeg);
+                    EncoderParameters myEncoderParameters = new EncoderParameters();
+                    myEncoderParameters.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L);
+                    pictureBox2.Image.Save(saveFileDialog1.FileName, jpgEncoder, myEncoderParameters);
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка при сохранении файла");
+                }
+            }
+        }
+
+        private void изКамерыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripStatusLabel2.Text = (изКамерыToolStripMenuItem.Checked) ? "из камеры" : " ";
         }
 
         private void изТочкиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = (изТочкиToolStripMenuItem.Checked) ? "Освещение точечное" : "Освещение параллельное";
-        }
-
-        private void прожекторToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStripStatusLabel4.Text = (изТочкиToolStripMenuItem.Checked) ? "Прожектор" : "Освещение затухание";
         }
 
         private void открытьКартуНормалейToolStripMenuItem_Click(object sender, EventArgs e)

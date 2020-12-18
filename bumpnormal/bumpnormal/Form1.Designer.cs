@@ -293,12 +293,6 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(162, 17);
             this.toolStripStatusLabel3.Text = "| Максимальная высота 0,01";
             // 
-            // toolStripStatusLabel4
-            // 
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(90, 17);
-            this.toolStripStatusLabel4.Text = "Прожектор";
-            // 
             // hScrollBar1
             // 
             this.hScrollBar1.LargeChange = 1;
@@ -323,7 +317,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "Form1";
-            this.Text = "Выщерблины";
+            this.Text = "Рельефное текстурирование";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);

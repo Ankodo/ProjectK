@@ -72,17 +72,6 @@ float4 PS1(PI IN) : COLOR
 	return float4(c * diff * atten);
 }
 
-// Код пиксельного шейдера ps3
-float4 PS1(PI IN) : COLOR
-{
-	float4 lpn = ln - IN.pos; //Прожектор
-	float3 normcol = tex2D(stxn, IN.tex).xyz - float3(0.5, 0.5, 0.5);
-	float diff = dot(normalize(normcol), normalize(lpn));
-	float llpn = length(lpn);
-	float atten = 2 / llpn / llpn;
-	return float4(c * diff * atten);
-}
-
 // Код пиксельного шейдера ps2
 float4 PS2(PI IN) : COLOR
 {		
