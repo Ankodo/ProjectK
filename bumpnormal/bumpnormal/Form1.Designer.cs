@@ -34,9 +34,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.m1 = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьКартуВысотToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитьКартуВысотToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //this.сохранитьКартуВысотToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьКартуНормалейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитьКартуНормалейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+           // this.сохранитьКартуНормалейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.m12 = new System.Windows.Forms.ToolStripMenuItem();
             this.m2 = new System.Windows.Forms.ToolStripMenuItem();
             this.m27 = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,9 +89,9 @@
             // 
             this.m1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.открытьКартуВысотToolStripMenuItem,
-            this.сохранитьКартуВысотToolStripMenuItem,
+            //this.сохранитьКартуВысотToolStripMenuItem,
             this.открытьКартуНормалейToolStripMenuItem,
-            this.сохранитьКартуНормалейToolStripMenuItem,
+           // this.сохранитьКартуНормалейToolStripMenuItem,
             this.m12});
             this.m1.Name = "m1";
             this.m1.Size = new System.Drawing.Size(48, 20);
@@ -106,10 +106,10 @@
             // 
             // сохранитьКартуВысотToolStripMenuItem
             // 
-            this.сохранитьКартуВысотToolStripMenuItem.Name = "сохранитьКартуВысотToolStripMenuItem";
-            this.сохранитьКартуВысотToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.сохранитьКартуВысотToolStripMenuItem.Text = "Сохранить карту высот";
-            this.сохранитьКартуВысотToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКартуВысотToolStripMenuItem_Click);
+            //this.сохранитьКартуВысотToolStripMenuItem.Name = "сохранитьКартуВысотToolStripMenuItem";
+            //this.сохранитьКартуВысотToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            //this.сохранитьКартуВысотToolStripMenuItem.Text = "Сохранить карту высот";
+            //this.сохранитьКартуВысотToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКартуВысотToolStripMenuItem_Click);
             // 
             // открытьКартуНормалейToolStripMenuItem
             // 
@@ -120,10 +120,10 @@
             // 
             // сохранитьКартуНормалейToolStripMenuItem
             // 
-            this.сохранитьКартуНормалейToolStripMenuItem.Name = "сохранитьКартуНормалейToolStripMenuItem";
-            this.сохранитьКартуНормалейToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.сохранитьКартуНормалейToolStripMenuItem.Text = "Сохранить карту нормалей";
-            this.сохранитьКартуНормалейToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКартуНормалейToolStripMenuItem_Click);
+            //this.сохранитьКартуНормалейToolStripMenuItem.Name = "сохранитьКартуНормалейToolStripMenuItem";
+            //this.сохранитьКартуНормалейToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            //this.сохранитьКартуНормалейToolStripMenuItem.Text = "Сохранить карту нормалей";
+            //this.сохранитьКартуНормалейToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКартуНормалейToolStripMenuItem_Click);
             // 
             // m12
             // 
@@ -154,7 +154,7 @@
             // 
             this.цветОбразцаToolStripMenuItem.Name = "цветОбразцаToolStripMenuItem";
             this.цветОбразцаToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.цветОбразцаToolStripMenuItem.Text = "Цвет образца";
+            this.цветОбразцаToolStripMenuItem.Text = "Цвет поверхности";
             this.цветОбразцаToolStripMenuItem.Click += new System.EventHandler(this.цветОбразцаToolStripMenuItem_Click);
             // 
             // освещениеToolStripMenuItem
@@ -211,10 +211,10 @@
             // 
             // инвертироватьToolStripMenuItem
             // 
-            this.инвертироватьToolStripMenuItem.Name = "инвертироватьToolStripMenuItem";
-            this.инвертироватьToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.инвертироватьToolStripMenuItem.Text = "Инвертировать";
-            this.инвертироватьToolStripMenuItem.Click += new System.EventHandler(this.инвертироватьToolStripMenuItem_Click);
+            //this.инвертироватьToolStripMenuItem.Name = "инвертироватьToolStripMenuItem";
+            //this.инвертироватьToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            //this.инвертироватьToolStripMenuItem.Text = "Инвертировать";
+            //this.инвертироватьToolStripMenuItem.Click += new System.EventHandler(this.инвертироватьToolStripMenuItem_Click);
             // 
             // преобразоватьToolStripMenuItem
             // 
@@ -317,7 +317,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "Form1";
-            this.Text = "Рельефное текстурирование";
+            this.Text = "Комп Графика, РТУ МИРЭА";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
@@ -350,7 +350,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem открытьКартуВысотToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem преобразоватьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сохранитьКартуНормалейToolStripMenuItem;
+        //private System.Windows.Forms.ToolStripMenuItem сохранитьКартуНормалейToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem освещениеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изТочкиToolStripMenuItem;
@@ -360,7 +360,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripMenuItem открытьКартуНормалейToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem нормализоватьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сохранитьКартуВысотToolStripMenuItem;
+       // private System.Windows.Forms.ToolStripMenuItem сохранитьКартуВысотToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem использоватьCPUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem использоватьGPUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem нормализоватьToolStripMenuItem1;

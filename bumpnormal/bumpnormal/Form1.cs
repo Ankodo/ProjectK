@@ -417,21 +417,21 @@ namespace bumpnormal
             return null;
         }
 
-        private void инвертироватьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (pictureBox1.Image == null) return;
-            for (int i = 0; i < bmhm.Width; i++)
-            {
-                for (int j = 0; j < bmhm.Height; j++)
-                {
-                    var pij = Color.FromArgb((int)(255 - bmhm.GetPixel(i, j).R), (int)(255 - bmhm.GetPixel(i, j).R), (int)(255 - bmhm.GetPixel(i, j).R));
-                    bmhm.SetPixel(i, j, pij);
-                }
-            }
-            pictureBox1.Image = (Image)bmhm;
-            if (txh != null) txh.Dispose();
-            txh = Texture.FromBitmap(dr, bmhm, Usage.None, Pool.Managed);
-        }
+        //private void инвертироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    if (pictureBox1.Image == null) return;
+        //    for (int i = 0; i < bmhm.Width; i++)
+        //    {
+        //        for (int j = 0; j < bmhm.Height; j++)
+        //        {
+        //            var pij = Color.FromArgb((int)(255 - bmhm.GetPixel(i, j).R), (int)(255 - bmhm.GetPixel(i, j).R), (int)(255 - bmhm.GetPixel(i, j).R));
+        //            bmhm.SetPixel(i, j, pij);
+        //        }
+        //    }
+        //    pictureBox1.Image = (Image)bmhm;
+        //    if (txh != null) txh.Dispose();
+        //    txh = Texture.FromBitmap(dr, bmhm, Usage.None, Pool.Managed);
+        //}
 
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {

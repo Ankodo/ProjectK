@@ -6,7 +6,6 @@ float4 c;
 float4 ln;
 	
 float h; 
-
 texture txn;
 sampler stxn = sampler_state
 {
@@ -65,10 +64,10 @@ float4 PS0(PI IN) : COLOR
 float4 PS1(PI IN) : COLOR
 {
 	float4 lpn = ln - IN.pos; //Точечный источник
-	float3 normcol = tex2D(stxn, IN.tex).xyz - float3(0.5, 0.5, 0.5);
+	float3 normcol = tex2D(stxn, IN.tex).xyz - float3(1, 1, 1);
 	float diff = dot(normalize(normcol), normalize(lpn));
 	float llpn = length(lpn);
-	float atten = 2 / llpn / llpn;
+	float atten = 4 / llpn / llpn;
 	return float4(c * diff * atten);
 }
 

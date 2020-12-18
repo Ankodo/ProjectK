@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bumpnormal.exe" size="166912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bumpnormal.exe" size="165888">
       <assemblyIdentity name="bumpnormal" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bmBXWpWnDbEXzELBGpooLPEHaGgYrRFMkdfU9nGmdJ8=</dsig:DigestValue>
+        <dsig:DigestValue>S+i/fF5lhhXTr44hQSRJqZn2qMNWY/IiyA/5wp6p2TY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
